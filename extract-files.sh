@@ -45,6 +45,8 @@ adb pull /system/etc/am2server.pubkey ../../../vendor/$VENDOR/$DEVICE/proprietar
 adb pull /system/lib/libAuthUDMDrv_1750A100.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 adb pull /system/lib/libam2app.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 adb pull /system/lib/libam2server.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/app/FingerprintSensor.apk ../../../vendor/$VENDOR/$DEVICE/proprietary/app
+adb pull /system/etc/tsm.xml ../../../vendor/$VENDOR/$DEVICE/proprietary/etc
 
 # system libs
 adb pull /system/lib/libmirror.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
@@ -257,5 +259,13 @@ wget "${BASEURL}MirrorService.apk" -O ../../../vendor/$VENDOR/$DEVICE/proprietar
 wget "${BASEURL}ExtDispService.apk" -O ../../../vendor/$VENDOR/$DEVICE/proprietary/app/ExtDispService.apk
 wget "${BASEURL}libhdmi.so" -O ../../../vendor/$VENDOR/$DEVICE/proprietary/lib/libhdmi.so
 wget "${BASEURL}overlay.tegra.so" -O ../../../vendor/$VENDOR/$DEVICE/proprietary/lib/hw/overlay.tegra.so
+wget "${BASEURL}am2app.jar" -O ../../../vendor/$VENDOR/$DEVICE/proprietary/app/am2app.jar
+wget "${BASEURL}GfxEngine.apk" -O ../../../vendor/$VENDOR/$DEVICE/proprietary/app/GfxEngine.apk
+wget "${BASEURL}FingerprintSensor.apk" -O ../../../vendor/$VENDOR/$DEVICE/proprietary/app/FingerprintSensor.apk
+wget "${BASEURL}am2server" -O ../../../vendor/$VENDOR/$DEVICE/proprietary/bin/am2server
+wget "${BASEURL}libAuthUDMDrv_1750A100.so" -O ../../../vendor/$VENDOR/$DEVICE/proprietary/lib/libAuthUDMDrv_1750A100.so
+wget "${BASEURL}libam2app.so" -O ../../../vendor/$VENDOR/$DEVICE/proprietary/lib/libam2app.so
+wget "${BASEURL}libam2server.so" -O ../../../vendor/$VENDOR/$DEVICE/proprietary/lib/libam2server.so
+wget "${BASEURL}tsm.xml" -O ../../../vendor/$VENDOR/$DEVICE/proprietary/etc/tsm.xml
 
 ./setup-makefiles.sh
