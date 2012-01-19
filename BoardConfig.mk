@@ -28,7 +28,7 @@ USE_CAMERA_STUB := true
 BOARD_USES_GENERIC_AUDIO := false
 
 # inherit from the proprietary version
--include vendor/motorola/olympus/BoardConfigVendor.mk
+-include vendor/moto/olympus/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := olympus
@@ -41,8 +41,8 @@ TARGET_ARCH_VARIANT_FPU := vfpv3-d16
 TARGET_CPU_SMP := true
 TARGET_HAVE_TEGRA_ERRATA_657451 := true
 
-BOARD_CUSTOM_GRAPHICS := ../../../device/motorola/olympus/recovery/graphics.c
-BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/motorola/olympus/recovery/recovery_ui.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/moto/olympus/recovery/graphics.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/moto/olympus/recovery/recovery_ui.c
 BOARD_HAS_SDCARD_INTERNAL := true
 
 BOARD_KERNEL_CMDLINE :=
@@ -57,7 +57,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 197772160
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1073741824
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_HAS_JANKY_BACKBUFFER := true
-TARGET_PREBUILT_KERNEL := device/motorola/olympus/kernel
+TARGET_PREBUILT_KERNEL := device/moto/olympus/kernel
 TARGET_USERIMAGES_USE_EXT4 := true
 # Below is a sample of how you can tweak the mount points using the board config.
 BOARD_HAS_NO_MISC_PARTITION := true
@@ -123,16 +123,16 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 
 #Camera
 TARGET_USE_MOTO_CUSTOM_CAMERA_PARAMETERS := true
-TARGET_SPECIFIC_HEADER_PATH := device/motorola/olympus/include
+TARGET_SPECIFIC_HEADER_PATH := device/moto/olympus/include
 
 #EGL
-BOARD_EGL_CFG := device/motorola/olympus/config/egl.cfg
+BOARD_EGL_CFG := device/moto/olympus/config/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DMISSING_EGL_EXTERNAL_IMAGE -DMISSING_EGL_PIXEL_FORMAT_YV12 -DMISSING_GRALLOC_BUFFERS
 #USE_OPENGL_RENDERER := true
 BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
 
 #USB Tethering
-BOARD_CUSTOM_USB_CONTROLLER := ../../device/motorola/olympus/UsbController.cpp
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/moto/olympus/UsbController.cpp
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 #UMS

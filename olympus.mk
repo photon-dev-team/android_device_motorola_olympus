@@ -24,22 +24,22 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 PRODUCT_COPY_FILES += \
-    device/motorola/olympus/init.olympus.rc:root/init.olympus.rc \
-    device/motorola/olympus/init.olympus.usb.rc:root/init.olympus.usb.rc \
-    device/motorola/olympus/ueventd.olympus.rc:root/ueventd.olympus.rc
+    device/moto/olympus/init.olympus.rc:root/init.olympus.rc \
+    device/moto/olympus/init.olympus.usb.rc:root/init.olympus.usb.rc \
+    device/moto/olympus/ueventd.olympus.rc:root/ueventd.olympus.rc
 
 ## (2) Also get non-open-source GSM-specific aspects if available
-$(call inherit-product-if-exists, vendor/motorola/olympus/olympus-vendor.mk)
+$(call inherit-product-if-exists, vendor/moto/olympus/olympus-vendor.mk)
 
 # motorola helper scripts
 PRODUCT_COPY_FILES += \
-    device/motorola/olympus/scripts/pds_perm_fix.sh:system/bin/pds_perm_fix.sh \
-    device/motorola/olympus/scripts/bt_init_wrapper.sh:system/bin/bt_init_wrapper.sh \
-    device/motorola/olympus/scripts/hciattach_wrapper.sh:system/bin/hciattach_wrapper.sh
+    device/moto/olympus/scripts/pds_perm_fix.sh:system/bin/pds_perm_fix.sh \
+    device/moto/olympus/scripts/bt_init_wrapper.sh:system/bin/bt_init_wrapper.sh \
+    device/moto/olympus/scripts/hciattach_wrapper.sh:system/bin/hciattach_wrapper.sh
 
 # sysctl conf
 PRODUCT_COPY_FILES += \
-    device/motorola/olympus/config/sysctl.conf:system/etc/sysctl.conf
+    device/moto/olympus/config/sysctl.conf:system/etc/sysctl.conf
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 
@@ -51,12 +51,12 @@ PRODUCT_LOCALES += hdpi
 
 # copy all kernel modules under the "modules" directory to system/lib/modules
 PRODUCT_COPY_FILES += $(shell \
-    find device/motorola/olympus/modules -name '*.ko' \
+    find device/moto/olympus/modules -name '*.ko' \
     | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
     | tr '\n' ' ')
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/motorola/olympus/kernel
+	LOCAL_KERNEL := device/moto/olympus/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -64,7 +64,7 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-$(call inherit-product-if-exists, vendor/motorola/olympus/olympus-vendor.mk)
+$(call inherit-product-if-exists, vendor/moto/olympus/olympus-vendor.mk)
 
 $(call inherit-product, build/target/product/full_base_telephony.mk)
 
@@ -74,32 +74,32 @@ PRODUCT_PACKAGES += Usb \
 			audio.primary.olympus \
 			audio.a2dp.default
 
-DEVICE_PACKAGE_OVERLAYS += device/motorola/olympus/overlay
+DEVICE_PACKAGE_OVERLAYS += device/moto/olympus/overlay
 
 # Board-specific init
 PRODUCT_COPY_FILES += \
-    device/motorola/olympus/config/vold.fstab:system/etc/vold.fstab \
-    device/motorola/olympus/init.vsnet:system/bin/init.vsnet \
-    device/motorola/olympus/scripts/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
-    device/motorola/olympus/prebuilts/liba2dp.so:system/lib/liba2dp.so \
-    #device/motorola/olympus/config/media_profiles.xml:system/etc/media_profiles.xml \
+    device/moto/olympus/config/vold.fstab:system/etc/vold.fstab \
+    device/moto/olympus/init.vsnet:system/bin/init.vsnet \
+    device/moto/olympus/scripts/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
+    device/moto/olympus/prebuilts/liba2dp.so:system/lib/liba2dp.so \
+    #device/moto/olympus/config/media_profiles.xml:system/etc/media_profiles.xml \
 
 #keyboard files
 PRODUCT_COPY_FILES += \
-    device/motorola/olympus/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
-    device/motorola/olympus/keychars/tegra-kbc.kcm.bin:system/usr/keychars/tegra-kbc.kcm.bin \
-    device/motorola/olympus/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/motorola/olympus/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    device/motorola/olympus/keylayout/qtouch-obp-ts.kl:system/usr/keylayout/qtouch-obp-ts.kl \
-    device/motorola/olympus/config/qtouch-obp-ts.idc:system/usr/idc/qtouch-obp-ts.idc \
-    device/motorola/olympus/keylayout/Motorola_Mobility_Motorola_HD_Dock.kl:system/usr/keylayout/Motorola_Mobility_Motorola_HD_Dock.kl \
-    device/motorola/olympus/keylayout/cpcap-key.kl:system/usr/keylayout/cpcap-key.kl \
-    device/motorola/olympus/keylayout/evfwd.kl:system/usr/keylayout/evfwd.kl \
-    device/motorola/olympus/keychars/evfwd.kcm.bin:system/usr/keychars/evfwd.kcm.bin \
-    device/motorola/olympus/keylayout/usb_keyboard_102_en_us.kl:system/usr/keylayout/usb_keyboard_102_en_us.kl \
-    device/motorola/olympus/keychars/usb_keyboard_102_en_us.kcm.bin:system/usr/keychars/usb_keyboard_102_en_us.kcm.bin \
-    device/motorola/olympus/keylayout/usb_keyboard_102_en_us.kl:system/usr/keylayout/Motorola_Bluetooth_Wireless_Keyboard.kl \
-    device/motorola/olympus/keychars/usb_keyboard_102_en_us.kcm.bin:system/usr/keychars/Motorola_Bluetooth_Wireless_Keyboard.kcm.bin
+    device/moto/olympus/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
+    device/moto/olympus/keychars/tegra-kbc.kcm.bin:system/usr/keychars/tegra-kbc.kcm.bin \
+    device/moto/olympus/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/moto/olympus/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/moto/olympus/keylayout/qtouch-obp-ts.kl:system/usr/keylayout/qtouch-obp-ts.kl \
+    device/moto/olympus/config/qtouch-obp-ts.idc:system/usr/idc/qtouch-obp-ts.idc \
+    device/moto/olympus/keylayout/Motorola_Mobility_Motorola_HD_Dock.kl:system/usr/keylayout/Motorola_Mobility_Motorola_HD_Dock.kl \
+    device/moto/olympus/keylayout/cpcap-key.kl:system/usr/keylayout/cpcap-key.kl \
+    device/moto/olympus/keylayout/evfwd.kl:system/usr/keylayout/evfwd.kl \
+    device/moto/olympus/keychars/evfwd.kcm.bin:system/usr/keychars/evfwd.kcm.bin \
+    device/moto/olympus/keylayout/usb_keyboard_102_en_us.kl:system/usr/keylayout/usb_keyboard_102_en_us.kl \
+    device/moto/olympus/keychars/usb_keyboard_102_en_us.kcm.bin:system/usr/keychars/usb_keyboard_102_en_us.kcm.bin \
+    device/moto/olympus/keylayout/usb_keyboard_102_en_us.kl:system/usr/keylayout/Motorola_Bluetooth_Wireless_Keyboard.kl \
+    device/moto/olympus/keychars/usb_keyboard_102_en_us.kcm.bin:system/usr/keychars/Motorola_Bluetooth_Wireless_Keyboard.kcm.bin
 
 # Permission files
 PRODUCT_COPY_FILES += \

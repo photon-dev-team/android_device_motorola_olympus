@@ -8,7 +8,7 @@ PRODUCT_RELEASE_NAME := Atrix
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
  
 ## Inherit device configuration
-$(call inherit-product, device/motorola/olympus/olympus.mk)
+$(call inherit-product, device/moto/olympus/olympus.mk)
  
 PRODUCT_NAME := cm_olympus
  

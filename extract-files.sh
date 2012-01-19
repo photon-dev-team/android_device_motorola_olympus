@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-VENDOR=motorola
+VENDOR=moto
 DEVICE=olympus
 
 rm -rf ../../../vendor/$VENDOR/$DEVICE/* #dont delete the git folder
@@ -39,12 +39,12 @@ mkdir -p ../../../vendor/$VENDOR/$DEVICE/proprietary/lib/hw
 #adb pull /system/app/ProgramMenuSystem.apk ../../../vendor/motorola/$DEVICE/proprietaryadb
 
 # fingerprint stuff
-adb pull /system/bin/am2server ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
-adb pull /system/app/GfxEngine.apk ../../../vendor/$VENDOR/$DEVICE/proprietary/app
-adb pull /system/etc/am2server.pubkey ../../../vendor/$VENDOR/$DEVICE/proprietary/etc
-adb pull /system/lib/libAuthUDMDrv_1750A100.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
-adb pull /system/lib/libam2app.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
-adb pull /system/lib/libam2server.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+#adb pull /system/bin/am2server ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+#adb pull /system/app/GfxEngine.apk ../../../vendor/$VENDOR/$DEVICE/proprietary/app
+#adb pull /system/etc/am2server.pubkey ../../../vendor/$VENDOR/$DEVICE/proprietary/etc
+#adb pull /system/lib/libAuthUDMDrv_1750A100.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+#adb pull /system/lib/libam2app.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+#adb pull /system/lib/libam2server.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 
 # system libs
 adb pull /system/lib/libmirror.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
