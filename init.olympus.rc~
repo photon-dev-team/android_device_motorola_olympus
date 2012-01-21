@@ -1,14 +1,14 @@
 import init.olympus.usb.rc
 
 on init
-    export EXTERNAL_STORAGE /mnt/sdcard
-    export PHONE_STORAGE /mnt/emmc
+    export EXTERNAL_STORAGE /mnt/sdcard-ext
+    export PHONE_STORAGE /mnt/sdcard
     # create mountpoints for storage
-    mkdir /mnt/emmc 0000 system system
     mkdir /mnt/sdcard 0000 system system
-    symlink /mnt/emmc /emmc
+    mkdir /mnt/sdcard-ext 0000 system system
     symlink /mnt/sdcard /sdcard
-    symlink /mnt/sdcard /emmc/sdcard
+    symlink /mnt/sdcard-ext /sdcard-ext
+    symlink /mnt/sdcard-ext /sdcard/sdcard-ext
     # battery driver permissions
     mkdir /pds 0755 root root
     mkdir /osh 0000 root root

@@ -5,7 +5,6 @@ ro.sf.lcd_density=240
 dalvik.vm.heapsize=64m
 
 #RIL
-ro.telephony.ril_class=mototegra
 rild.libpath=/system/lib/libmoto_ril.so
 persist.ril.mux.noofchannels=9
 persist.ril.mux.ttydevice=/dev/ttyHS3
@@ -36,7 +35,7 @@ net.tcp.buffersize.gprs=4096,8192,12288,4096,8192,12288
 ro.telephony.default_network=0
 
 # Mount the internal SD card, too
-ro.additionalmounts=/mnt/emmc
+ro.additionalmounts=/mnt/sdcard
 
 #special moto usb handling
 ro.usb.use_custom_service=1
@@ -85,3 +84,13 @@ dalvik.vm.dexopt-flags=m=y,u=n
 ro.hdmi.mirror.enable=true
 
 persist.sys.usb.config=mass_storage,adb
+
+# tweaks
+
+debug.sf.hw = 1
+persist.sys.use_dithering = 0
+ro.HOME_APP_ADJ = 1
+pm.sleep_mode = 1
+windowsmgr.max_events_per_sec=150
+debug.performance.tuning=1
+video.accelerate.hw=1
