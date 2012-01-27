@@ -191,6 +191,42 @@ adb pull /system/bin/usbd ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 adb pull /system/bin/akmd2 ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 adb pull /system/bin/whisperd ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 
+# LP Added----
+
+# BIN 
+
+adb pull /system/bin/fmradioserver ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+adb pull /system/bin/memtest_mode ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+adb pull /system/bin/nv_hciattach ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+adb pull /system/bin/nvmm_wmaprodec.axf ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+adb pull /system/bin/remountpds ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+adb pull /system/bin/slateipcd ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+adb pull /system/bin/tcmd ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+adb pull /system/bin/tegrastats ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+adb pull /system/bin/vpnclientpm ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
+
+# LIB
+
+adb pull /system/lib/libfmradio_jni.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libfmradioplayer.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libnvidia_display_jni.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libnvec.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libnvwinsys.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libomx_amrenc_sharedlibrary.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libopencore_author.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libopencore_common.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libopencore_download.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libopencore_downloadreg.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libopencore_mp4local.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libopencore_mp4localreg.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libopencore_net_support.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libopencore_player.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libopencore_rtsp.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libopencore_rtspreg.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+adb pull /system/lib/libpixelflinger.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
+
+#-----------
+
 # Pull BT files
 adb pull /system/bin/bt_init ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 adb pull /system/bin/bt_downloader ../../../vendor/$VENDOR/$DEVICE/proprietary/bin

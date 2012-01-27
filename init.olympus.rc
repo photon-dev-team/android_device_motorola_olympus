@@ -219,6 +219,15 @@ on boot
     chown system system /sys/class/leds/white/brightness
     chmod 0664 /sys/class/leds/white/brightness
 
+# add missing camera crap
+# Camera
+    chown media camera /sys/class/leds/privacy-led/brightness
+    chown media camera /sys/class/leds/flash/brightness
+    chown media camera /sys/class/leds/torch/brightness
+    chmod 660 /sys/class/leds/privacy-led/brightness
+    chmod 660 /sys/class/leds/flash/brightness
+    chmod 660 /sys/class/leds/torch/brightness
+
 #===================================================================
 # TCMD 
 #===================================================================
@@ -249,10 +258,6 @@ on boot
     chown system shell /system/local
     chown system shell /system/local/12m
     chown system shell /system/local/12m/batch
-
-    # Required for Blur Bypass menu required for factory/user testing.
-    mkdir /system/etc/motorola/com.motorola.blur.setup 0771 system shell
-    chown system shell /system/etc/motorola/com.motorola.blur.setup
 
     # vibrator permissions
     chmod 0664 /sys/class/timed_output/vibrator/enable
@@ -405,16 +410,6 @@ service dhcpcd_eth0 /system/bin/dhcpcd -ABKL
 
 service iprenew_eth0 /system/bin/dhcpcd -n
     group dhcp
-    disabled
-    oneshot
-
-service dhcpcd_bnep0 /system/bin/dhcpcd -ABKL
-    class main
-    disabled
-    oneshot
-
-service iprenew_bnep0 /system/bin/dhcpcd -n
-    class main
     disabled
     oneshot
 
