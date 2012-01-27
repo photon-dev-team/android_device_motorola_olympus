@@ -6,6 +6,7 @@ on init
     # create mountpoints for storage
     mkdir /mnt/emmc 0000 system system
     mkdir /mnt/sdcard 0000 system system
+	mkdir /emmc/sdcard 0000 system system
     symlink /mnt/emmc /emmc
     symlink /mnt/sdcard /sdcard
     symlink /mnt/sdcard /emmc/sdcard
@@ -83,6 +84,7 @@ on post-fs
     chown root system /proc/sysrq-trigger
     chmod 0220 /proc/sysrq-trigger
 
+on post-fs-data
     # wlan permissions
     mkdir /data/misc/wifi 0771 wifi wifi
     mkdir /data/misc/wifi/sockets 0771 wifi wifi
@@ -403,6 +405,16 @@ service dhcpcd_eth0 /system/bin/dhcpcd -ABKL
 
 service iprenew_eth0 /system/bin/dhcpcd -n
     group dhcp
+    disabled
+    oneshot
+
+service dhcpcd_bnep0 /system/bin/dhcpcd -ABKL
+    class main
+    disabled
+    oneshot
+
+service iprenew_bnep0 /system/bin/dhcpcd -n
+    class main
     disabled
     oneshot
 
