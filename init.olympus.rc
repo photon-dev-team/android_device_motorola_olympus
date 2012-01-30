@@ -97,6 +97,7 @@ on post-fs-data
 
 on boot
     # nvrm permissions
+    chown system system /dev/nvrm
     chmod 666 /dev/nvrm
 
     # knvrm permissions
