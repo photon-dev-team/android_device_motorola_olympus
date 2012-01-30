@@ -67,6 +67,10 @@ dalvik.vm.dexopt-flags=m=y,u=n
 
 persist.sys.usb.config=mass_storage
 
+# Fingerprint
+ro.authentec.fingerprint.jar=/system/framework/am2app.jar
+ro.authentec.fingerprint.so=/system/lib/libam2app.so
+
 # tweaks
 
 debug.sf.hw = 1
