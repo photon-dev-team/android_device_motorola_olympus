@@ -110,6 +110,8 @@ key 96    ENTER
 key 58    CAPS
 #END IKOLYMP-2624
 
+key 58    SHIFT_LEFT        CAPS_LOCK
+
 #BEGIN Moto:IKOLYMP-4580_krmt43:added ~ or` for webtop AIW
 key 41    GRAVE
 #END IKOLYMP-4580
