@@ -123,13 +123,15 @@ COMMON_GLOBAL_CFLAGS += -DMISSING_EGL_EXTERNAL_IMAGE -DMISSING_EGL_PIXEL_FORMAT_
 # false only works when opengl is turned on
 BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
 
+
 #HDMI
 BOARD_USES_LGE_HDMI_ROTATION := true
 
 BOARD_HAS_LARGE_FILESYSTEM := true
 
-#UMS
+#UMS, MTP
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun%d/file"
+BOARD_MTP_DEVICE := "/dev/mtp"
 
 # Dock Audio
 BOARD_USE_MOTO_DOCK_HACK := true

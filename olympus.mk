@@ -35,7 +35,7 @@ $(call inherit-product-if-exists, vendor/moto/olympus/olympus-vendor.mk)
 PRODUCT_COPY_FILES += \
     device/moto/olympus/scripts/pds_perm_fix.sh:system/bin/pds_perm_fix.sh \
     device/moto/olympus/scripts/bt_init_wrapper.sh:system/bin/bt_init_wrapper.sh \
-    device/moto/olympus/scripts/hciattach_wrapper.sh:system/bin/hciattach_wrapper.sh
+    device/moto/olympus/scripts/usb_switch.sh:system/bin/usb_switch.sh
 
 # sysctl conf
 PRODUCT_COPY_FILES += \
@@ -74,6 +74,10 @@ $(call inherit-product, build/target/product/full_base_telephony.mk)
 PRODUCT_PACKAGES += Usb \
 			DockAudio \
 			Torch \
+			OlympusParts \
+			hciconfig \
+			hcitool \
+			camera.olympus \
 			audio.primary.olympus \
 			audio.a2dp.default
 
@@ -92,6 +96,7 @@ PRODUCT_COPY_FILES += \
     device/moto/olympus/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
     device/moto/olympus/keychars/tegra-kbc.kcm.bin:system/usr/keychars/tegra-kbc.kcm.bin \
     device/moto/olympus/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/moto/olympus/keylayout/qwerty.kl:system/usr/keylayout/BTC_USB_Cordless_Mouse.kl \
     device/moto/olympus/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/moto/olympus/keylayout/qtouch-obp-ts.kl:system/usr/keylayout/qtouch-obp-ts.kl \
     device/moto/olympus/config/qtouch-obp-ts.idc:system/usr/idc/qtouch-obp-ts.idc \
