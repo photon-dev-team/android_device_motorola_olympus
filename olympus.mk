@@ -49,7 +49,7 @@ PRODUCT_LOCALES := en_US
 # olympus uses high-density artwork where available
 PRODUCT_LOCALES += hdpi
 
-# better code for dalvik heap size since we have space
+# not exactly xhdpi, but we have enough RAM, why not use it?
 $(call inherit-product, frameworks/base/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # copy all kernel modules under the "modules" directory to system/lib/modules
@@ -77,6 +77,7 @@ PRODUCT_PACKAGES += Usb \
 			OlympusParts \
 			hciconfig \
 			hcitool \
+			rilwrap \
 			camera.olympus \
 			audio.primary.olympus \
 			audio.a2dp.default
@@ -86,10 +87,9 @@ DEVICE_PACKAGE_OVERLAYS += device/moto/olympus/overlay
 # Board-specific init
 PRODUCT_COPY_FILES += \
     device/moto/olympus/config/vold.fstab:system/etc/vold.fstab \
-    device/moto/olympus/init.vsnet:system/bin/init.vsnet \
     device/moto/olympus/scripts/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
     device/moto/olympus/prebuilts/liba2dp.so:system/lib/liba2dp.so \
-    #device/moto/olympus/config/media_profiles.xml:system/etc/media_profiles.xml \
+    device/moto/olympus/config/media_profiles.xml:system/etc/media_profiles.xml
 
 #keyboard files
 PRODUCT_COPY_FILES += \
