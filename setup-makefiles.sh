@@ -39,12 +39,12 @@ PRODUCT_COPY_FILES += \\
 
 # FINGERPRINT
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libAuthUDMDrv_1750A100.so:system/lib/libAuthUDMDrv_1750A100.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libam2app.so:system/lib/libam2app.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libam2server.so:system/lib/libam2server.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/am2server:system/bin/am2server \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/app/GfxEngine.apk:system/app/GfxEngine.apk \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/etc/am2server.pubkey:system/etc/am2server.pubkey \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libAuthUDMDrv_1750A100.so:system/lib/libAuthUDMDrv_1750A100.so \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libam2app.so:system/lib/libam2app.so \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libam2server.so:system/lib/libam2server.so \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/bin/am2server:system/bin/am2server \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/app/GfxEngine.apk:system/app/GfxEngine.apk \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/etc/am2server.pubkey:system/etc/am2server.pubkey \\
 
 # HAL
 PRODUCT_COPY_FILES += \\
@@ -136,7 +136,7 @@ PRODUCT_COPY_FILES += \\
 # system libs
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libmirror.so:system/lib/libmirror.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libextdisp.so:system/lib/libextdisp.so \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libextdisp.so:system/lib/libextdisp.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libhdmi.so:system/lib/libhdmi.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libnvwsi.so:system/lib/libnvwsi.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libnvddk_2d_v2.so:system/lib/libnvddk_2d_v2.so \\
@@ -201,6 +201,7 @@ vendor/__VENDOR__/__DEVICE__/proprietary/bin/vpnclientpm:system/bin/vpnclientpm
 
 # LIB
 PRODUCT_COPY_FILES += \\
+vendor/__VENDOR__/__DEVICE__/proprietary/bin/fmradioserver:system/bin/fmradioserver \\
 vendor/__VENDOR__/__DEVICE__/proprietary/lib/libfmradio_jni.so:system/lib/libfmradio_jni.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/lib/libfmradioplayer.so:system/lib/libfmradioplayer.so \\
 vendor/__VENDOR__/__DEVICE__/proprietary/lib/libnvidia_display_jni.so:system/lib/libnvidia_display_jni.so \\

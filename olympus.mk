@@ -87,10 +87,9 @@ DEVICE_PACKAGE_OVERLAYS += device/moto/olympus/overlay
 # Board-specific init
 PRODUCT_COPY_FILES += \
     device/moto/olympus/config/vold.fstab:system/etc/vold.fstab \
-    device/moto/olympus/init.vsnet:system/bin/init.vsnet \
     device/moto/olympus/scripts/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
     device/moto/olympus/prebuilts/liba2dp.so:system/lib/liba2dp.so \
-    #device/moto/olympus/config/media_profiles.xml:system/etc/media_profiles.xml \
+    #device/moto/olympus/config/media_profiles.xml:system/etc/media_profiles.xml 
 
 #keyboard files
 PRODUCT_COPY_FILES += \
