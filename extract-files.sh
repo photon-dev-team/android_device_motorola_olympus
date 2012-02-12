@@ -197,7 +197,6 @@ adb pull /system/bin/whisperd ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 
 adb pull /system/bin/fmradioserver ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 adb pull /system/bin/memtest_mode ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
-adb pull /system/bin/nv_hciattach ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 adb pull /system/bin/nvmm_wmaprodec.axf ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 adb pull /system/bin/remountpds ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 adb pull /system/bin/slateipcd ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
@@ -207,8 +206,6 @@ adb pull /system/bin/vpnclientpm ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 
 # LIB
 
-adb pull /system/lib/libfmradio_jni.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
-adb pull /system/lib/libfmradioplayer.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 adb pull /system/lib/libnvidia_display_jni.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 adb pull /system/lib/libnvec.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
 adb pull /system/lib/libnvwinsys.so ../../../vendor/$VENDOR/$DEVICE/proprietary/lib
@@ -231,7 +228,7 @@ adb pull /system/lib/libpixelflinger.so ../../../vendor/$VENDOR/$DEVICE/propriet
 adb pull /system/bin/bt_init ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 adb pull /system/bin/bt_downloader ../../../vendor/$VENDOR/$DEVICE/proprietary/bin
 adb pull /system/etc/bt_init.config ../../../vendor/$VENDOR/$DEVICE/proprietary/etc
-adb pull /system/etc/BCM4329B1_002.002.023.0757.0780.hcd ../../../vendor/$VENDOR/$DEVICE/proprietary/etc
+adb pull /system/etc/BCM4329B1_002.002.023.0757.0782.hcd ../../../vendor/$VENDOR/$DEVICE/proprietary/etc
 
 # Pull Wifi userland firmware
 adb pull /system/etc/firmware/wifi/nvram.txt ../../../vendor/$VENDOR/$DEVICE/proprietary/etc/wl

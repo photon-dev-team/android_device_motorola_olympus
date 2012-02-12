@@ -38,13 +38,13 @@ PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libaudiopolicy.so:system/lib/libaudiopolicy.so
 
 # FINGERPRINT
-#PRODUCT_COPY_FILES += \\
-#    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libAuthUDMDrv_1750A100.so:system/lib/libAuthUDMDrv_1750A100.so \\
-#    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libam2app.so:system/lib/libam2app.so \\
-#    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libam2server.so:system/lib/libam2server.so \\
-#    vendor/__VENDOR__/__DEVICE__/proprietary/bin/am2server:system/bin/am2server \\
-#    vendor/__VENDOR__/__DEVICE__/proprietary/app/GfxEngine.apk:system/app/GfxEngine.apk \\
-#    vendor/__VENDOR__/__DEVICE__/proprietary/etc/am2server.pubkey:system/etc/am2server.pubkey \\
+PRODUCT_COPY_FILES += \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libAuthUDMDrv_1750A100.so:system/lib/libAuthUDMDrv_1750A100.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libam2app.so:system/lib/libam2app.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libam2server.so:system/lib/libam2server.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/bin/am2server:system/bin/am2server \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/app/GfxEngine.apk:system/app/GfxEngine.apk \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/etc/am2server.pubkey:system/etc/am2server.pubkey \\
 
 # HAL
 PRODUCT_COPY_FILES += \\
@@ -136,7 +136,7 @@ PRODUCT_COPY_FILES += \\
 # system libs
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libmirror.so:system/lib/libmirror.so \\
-#   vendor/__VENDOR__/__DEVICE__/proprietary/lib/libextdisp.so:system/lib/libextdisp.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libextdisp.so:system/lib/libextdisp.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libhdmi.so:system/lib/libhdmi.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libnvwsi.so:system/lib/libnvwsi.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libnvddk_2d_v2.so:system/lib/libnvddk_2d_v2.so \\
@@ -190,7 +190,6 @@ PRODUCT_COPY_FILES += \\
 # BIN 
 
 PRODUCT_COPY_FILES += \\
-vendor/__VENDOR__/__DEVICE__/proprietary/bin/fmradioserver:system/bin/fmradioserver \\
 vendor/__VENDOR__/__DEVICE__/proprietary/bin/memtest_mode:system/bin/memtest_mode \\
 vendor/__VENDOR__/__DEVICE__/proprietary/bin/nv_hciattach:system/bin/nv_hciattach \\
 vendor/__VENDOR__/__DEVICE__/proprietary/bin/nvmm_wmaprodec.axf:system/bin/nvmm_wmaprodec.axf \\
