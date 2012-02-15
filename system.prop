@@ -68,6 +68,9 @@ dalvik.vm.dexopt-flags=m=y,u=n
 
 persist.sys.usb.config=mass_storage
 
+# Allow people to exchange sdcard and emmc mountpoints from CMParts
+ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
+
 # Fingerprint
 ro.authentec.fingerprint.jar=/system/framework/am2app.jar
 ro.authentec.fingerprint.so=/system/lib/libam2app.so
