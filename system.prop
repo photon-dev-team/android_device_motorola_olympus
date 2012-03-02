@@ -75,12 +75,5 @@ ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
 ro.authentec.fingerprint.jar=/system/framework/am2app.jar
 ro.authentec.fingerprint.so=/system/lib/libam2app.so
 
-# tweaks
-
-debug.sf.hw = 1
-persist.sys.use_dithering = 0
-ro.HOME_APP_ADJ = 1
-pm.sleep_mode = 1
-windowsmgr.max_events_per_sec=150
-debug.performance.tuning=1
-video.accelerate.hw=1
+# CRT animation speed
+debug.sf.electron_frames=42
