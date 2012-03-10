@@ -58,10 +58,6 @@ persist.tegra.nvlog.level=4
 persist.tegra.drmlib.asfdrm=libnvdrm.so
 Drmdll.asfdrm=libnvdrm.so
 
-# Set locale to English US by default
-ro.product.locale.language=en
-ro.product.locale.region=US
-
 # Enable detailed GC data and SMP dexopt
 dalvik.vm.dexopt-flags=m=y,u=n
 
