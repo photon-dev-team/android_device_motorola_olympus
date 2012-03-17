@@ -1,4 +1,4 @@
-#
+	#
 # Copyright (C) 2009 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,7 +39,8 @@ PRODUCT_COPY_FILES += \
 
 # sysctl conf
 PRODUCT_COPY_FILES += \
-    device/moto/olympus/config/sysctl.conf:system/etc/sysctl.conf
+    device/moto/olympus/config/sysctl.conf:system/etc/sysctl.conf \
+    device/moto/olympus/config/init.d/01sysctl:system/etc/init.d/01sysctl
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 
@@ -77,9 +78,9 @@ PRODUCT_PACKAGES += Usb \
 			OlympusParts \
 			hciconfig \
 			hcitool \
+			hwcomposer.default \
 			rilwrap \
 			camera.olympus \
-			hwcomposer.default \
 			audio.primary.olympus \
 			audio.a2dp.default
 
