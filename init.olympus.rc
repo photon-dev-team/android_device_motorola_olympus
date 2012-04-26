@@ -228,18 +228,6 @@ on boot
     chown system system /sys/class/leds/white/brightness
     chmod 0664 /sys/class/leds/white/brightness
 
-# add missing camera crap
-# Camera
-    chown media camera /sys/class/leds/privacy-led/brightness
-    chown media camera /sys/class/leds/flash/brightness
-    chown media camera /sys/class/leds/torch/brightness
-    chmod 660 /sys/class/leds/privacy-led/brightness
-    chmod 660 /sys/class/leds/flash/brightness
-    chmod 660 /sys/class/leds/torch/brightness
-    chown system camera /sys/devices/platform/flashlight.0/leds/flashlight/brig$
-    chmod 0660 /sys/devices/platform/flashlight.0/leds/flashlight/brightness
-
-
 #===================================================================
 # TCMD 
 #===================================================================
