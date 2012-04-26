@@ -33,7 +33,7 @@ TARGET_PREBUILT_KERNEL := device/moto/olympus/kernel
 
 OLYMPUS_WIFI_MODULE:
 	make -C kernel/moto/olympus/wifi-module/open-src/src/dhd/linux/ \
-	ARCH="arm" CROSS_COMPILE="arm-eabi-" LINUXSRCDIR=kernel/olympus/ \
+	ARCH="arm" CROSS_COMPILE="arm-eabi-" LINUXSRCDIR=kernel/moto/olympus/ \
 	LINUXBUILDDIR=$(KERNEL_OUT) \
 	LINUXVER=$(shell strings "$(KERNEL_OUT)/vmlinux"|grep '2.6.*MB860'|tail -n1) \
 	BCM_INSTALLDIR="$(ANDROID_BUILD_TOP)/$(KERNEL_MODULES_OUT)"
