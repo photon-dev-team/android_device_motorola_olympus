@@ -32,10 +32,10 @@ TARGET_KERNEL_CONFIG := tegra_olympus_cm9_defconfig
 TARGET_PREBUILT_KERNEL := device/moto/olympus/kernel
 
 OLYMPUS_WIFI_MODULE:
-	make -C kernel/moto/olympus/wifi-module/open-src/src/dhd/linux/ \
-	ARCH="arm" CROSS_COMPILE="arm-eabi-" LINUXSRCDIR=kernel/moto/olympus/ \
-	LINUXBUILDDIR=$(KERNEL_OUT) \
-	LINUXVER=$(shell strings "$(KERNEL_OUT)/vmlinux"|grep '2.6.*MB860'|tail -n1) \
+	make -C kernel/moto/olympus/wifi-module/wlan/osrc/open-src/src/dhd/linux/ \
+	ARCH="arm" CROSS_COMPILE="arm-eabi-" LINUXSRCDIR=~/cm9/kernel/moto/olympus/ \
+	LINUXBUILDDIR=$(KERNEL_OUT) PLATFORM_DIR=~/cm9 \
+	KERNEL_SRC=$PLATFORM_DIR/kernel/moto/olympus ANDROID_BUILD_TOP=/$PLATFORM_DIR \
 	BCM_INSTALLDIR="$(ANDROID_BUILD_TOP)/$(KERNEL_MODULES_OUT)"
 
 TARGET_KERNEL_MODULES := OLYMPUS_WIFI_MODULE
