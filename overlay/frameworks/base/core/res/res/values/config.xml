@@ -38,7 +38,6 @@
         <item>wl.*</item>
     </string-array>
 
-
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
@@ -383,10 +382,10 @@
     <string name="default_wallpaper_component" translatable="false">@null</string>
 
     <!-- Component name of the service providing network location support. -->
-    <string name="config_networkLocationProvider" translatable="false">@null</string>
+    <string name="config_networkLocationProvider">com.google.android.location.NetworkLocationProvider</string>
 
     <!-- Component name of the service providing geocoder API support. -->
-    <string name="config_geocodeProvider" translatable="false">@null</string>
+    <string name="config_geocodeProvider">com.google.android.location.GeocodeProvider</string>
 
     <!-- Boolean indicating if current platform supports bluetooth SCO for off call
     use cases -->
