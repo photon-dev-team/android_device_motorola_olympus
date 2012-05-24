@@ -95,10 +95,8 @@ on post-fs-data
     setprop wifi.interface eth0
     setprop softap.interface wl0.1
 
-    # allow net_raw to have access to /dev/socket directory
-    # CM feat
-    chown root net_raw /dev/socket
-    chmod 0775 /dev/socket
+    # usbd permissions
+    mkdir /data/usbd 0777 system system
 
 on boot
     # nvrm permissions
