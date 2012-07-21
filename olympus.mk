@@ -72,6 +72,8 @@ $(call inherit-product-if-exists, vendor/moto/olympus/olympus-vendor.mk)
 
 $(call inherit-product, build/target/product/full_base_telephony.mk)
 
+PRODUCT_COPY_FILES += vendor/cm/prebuilt/common/bin/modelid_cfg.sh:system/bin/modelid_cfg.sh
+
 PRODUCT_PACKAGES += Usb \
 			DockAudio \
 			Torch \
