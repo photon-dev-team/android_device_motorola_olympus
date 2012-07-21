@@ -34,7 +34,7 @@ net.tcp.buffersize.gprs=4096,8192,12288,4096,8192,12288
 
 # Default network type.
 # 0 -> WCDMA preferred
-# ro.telephony.default_network=0
+ro.telephony.default_network=0
  
 # Time between scans in seconds. Keep it high to minimize battery drain.
 # This only affects the case in which there are remembered access points,
