@@ -42,7 +42,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/moto/olympus/config/sysctl.conf:system/etc/sysctl.conf \
     device/moto/olympus/config/init.d/01sysctl:system/etc/init.d/01sysctl \
-    device/motorola/olympus/config/audio_policy.conf:system/etc/audio_policy.conf
+    device/moto/olympus/config/audio_policy.conf:system/etc/audio_policy.conf
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 
