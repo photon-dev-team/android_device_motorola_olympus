@@ -1,4 +1,5 @@
 # Copyright (C) 2011 The Android Open Source Project
+# Copyright (C) 2011 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,28 +13,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# Input Device Calibration File for the Tuna touch screen.
-#
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),olympus)
 
-# Basic Parameters
-touch.deviceType = touchScreen
-touch.orientationAware = 1
+LOCAL_PATH:= $(call my-dir)
+# HAL module implemenation, not prelinked and stored in
+# hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
+include $(CLEAR_VARS)
 
-# Size
-touch.size.calibration = diameter
-touch.size.scale = 25
-touch.size.bias = 0
-touch.size.isSummed = 0
+LOCAL_SRC_FILES := lights.c
 
-# Pressure
-# Driver reports signal strength as pressure.
-#
-# A normal thumb touch typically registers about 200 signal strength
-# units although we don't expect these values to be accurate.
-touch.pressure.calibration = amplitude
-touch.pressure.scale = 0.01
+LOCAL_PRELINK_MODULE := false
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
-# Orientation
-touch.orientation.calibration = none
+LOCAL_SHARED_LIBRARIES := liblog
 
+LOCAL_MODULE := lights.olympus
+
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+endif
