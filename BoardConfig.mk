@@ -40,7 +40,6 @@ TARGET_ARCH_VARIANT := armv7-a
 TARGET_ARCH_VARIANT_CPU := cortex-a9
 TARGET_ARCH_VARIANT_FPU := vfpv3-d16
 TARGET_HAVE_TEGRA_ERRATA_657451 := true
-ARCH_ARM_HAVE_TLS_REGISTER := true
 
 BOARD_CUSTOM_GRAPHICS := ../../../device/moto/olympus/recovery/graphics.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/moto/olympus/recovery/recovery_ui.c
